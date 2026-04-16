@@ -11,11 +11,17 @@ import react from '@vitejs/plugin-react';
 
 const CHAT_VARIABLE = process.env.CHAT_VARIABLE || '';
 const PUBLIC_PATH = process.env.PUBLIC_PATH || '';
+const GITHUB_PAGES_REPO = 'Mihoo-Ghosting-App';
 
 const isProdEnv = process.env.NODE_ENV === 'production';
+const githubPagesBase = `/${GITHUB_PAGES_REPO}/`;
 const publicPath = (isProdEnv && CHAT_VARIABLE)
   ? PUBLIC_PATH + '/' + CHAT_VARIABLE
-  : PUBLIC_PATH + '/';
+  : PUBLIC_PATH
+    ? PUBLIC_PATH + '/'
+    : isProdEnv
+      ? githubPagesBase
+      : '/';
 const outDir = (isProdEnv && CHAT_VARIABLE) ? 'build/' + CHAT_VARIABLE : 'build';
 
 async function loadPlugins() {
