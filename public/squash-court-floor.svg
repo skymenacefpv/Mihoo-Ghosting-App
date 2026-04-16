@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Dark charcoal background -->
+  <rect width="1920" height="1080" fill="#1a1a1a"/>
+  
+  <!-- Yellow court markings - thick solid lines -->
+  <g stroke="#FFD700" stroke-width="12" fill="none" stroke-linecap="square">
+    <!-- Horizontal line across the middle -->
+    <line x1="0" y1="540" x2="1920" y2="540"/>
+    
+    <!-- Vertical center line extending downward from middle -->
+    <line x1="960" y1="540" x2="960" y2="1080"/>
+    
+    <!-- Left service box - rectangle connected to bottom of horizontal line -->
+    <rect x="360" y="540" width="600" height="300"/>
+    
+    <!-- Right service box - rectangle connected to bottom of horizontal line -->
+    <rect x="960" y="540" width="600" height="300"/>
+  </g>
+</svg>
